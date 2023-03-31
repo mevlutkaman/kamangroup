@@ -1,23 +1,9 @@
 #!/bin/bash
 
-# SSH kullanıcı adı
-username="root"
-
-# SSH bağlantı noktası
-port="22"
-
-# Hedef IP adresi
-ip="74.208.22.59"
-
-# SSH şifresi
-password="Serhildanroot.123"
-
 # Squid Proxy Sunucusu kullanıcı adı ve şifresi
 squid_user="mdkroot"
 squid_password="mdkroot"
 
-# Squid Proxy Sunucusu kurulumu ve yapılandırması
-sshpass -p $password ssh -o StrictHostKeyChecking=no $username@$ip -p $port << EOF
 sudo apt-get update
 sudo apt-get -y install squid apache2-utils
 sudo touch /etc/squid/passwd
